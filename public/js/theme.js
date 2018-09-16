@@ -4,8 +4,9 @@ $(document).ready(function() {
   		$('#preloader').delay(350).fadeOut('slow');
 	})*/
 
-	// Preload fonction
 	
+	// Preload fonction
+
 	$(window).on("load", function () {
         $('#preloader').fadeOut(500);
     });

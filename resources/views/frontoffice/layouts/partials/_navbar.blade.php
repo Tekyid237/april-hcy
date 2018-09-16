@@ -12,7 +12,7 @@
                         <ul class="nav navbar-nav main-nav pull-right navbar-right">
                             <li class="{{ set_active('home') }}"><a href= "{{ url('home') }}">Accueil</a></li>
                             <li class="{{ set_active('about') }}"><a href="{{ url('about') }}">A Propos</a></li>
-                            <li class="{{ set_active('about') }}"><a href="{{ url('contact') }}">Contact</a></li>
+                            <li class="{{ set_active('contact') }}"><a href="{{ url('contact') }}">Contact</a></li>
                             <li><a class="btn btn-primary appoint-btn" href="{{ url('appointment') }}">Prendre un RDV</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle settings-icon" data-toggle="dropdown">

@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontoffice.home');
-})->name('home');
 
-Route::get('/home', function () {
-    return view('frontoffice.home');
-})->name('home');
+Route::get('/', 'PagesController@home')->name('home');
+
+Route::get('/home', 'PagesController@home')->name('home');
+
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/cgu-april', 'PagesController@cgu')->name('cgu-april');
+Route::get('/faq', 'PagesController@faq')->name('faq');

@@ -1,7 +1,5 @@
 @extends('frontoffice.layouts.master', ['title' => 'Bienvenue sur APRIL, l\'application de prise de RDV en ligne de l\'Hôpital Central de Yaoundé'])
 
-@section('title')
-
 @section('content')
 	<!-- Main Content -->
 	<div class="main-content">
