@@ -1985,7 +1985,8 @@ body.menu-opened {
 	margin: 0 0 1.5rem;
 }
 .error-wrapper {
-	background: url('../img/img-01.jpg');
+	background: url('../img/img-02.jpg');
+	background-size: cover;
 	margin: 0;
 	align-items: center;
 	display: flex;
