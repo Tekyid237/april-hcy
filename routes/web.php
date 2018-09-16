@@ -13,4 +13,8 @@
 
 Route::get('/', function () {
     return view('frontoffice.home');
-});
+})->name('home');
+
+Route::get('/home', function () {
+    return view('frontoffice.home');
+})->name('home');

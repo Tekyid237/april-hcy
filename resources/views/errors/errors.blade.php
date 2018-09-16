@@ -41,8 +41,6 @@
     <!-- CSS links -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <!--[if lt IE 9]>
@@ -52,20 +50,10 @@
     
     <!-- Tag manager for Google go here -->
 </head>
+
 <body>
-   <!-- preloader div -->
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
-    </div>
-    <!-- preloader div -->
-
-    @include('frontoffice.layouts.partials._navbar')
-
+    
     @yield('content')
-        
-    @include('frontoffice.layouts.partials._footer')
-
-    <div class="sidebar-overlay" data-reff="#side_menu"></div>
 
     <!-- Javascript loading -->
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
@@ -73,4 +61,5 @@
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
 </body>
+
 </html>
