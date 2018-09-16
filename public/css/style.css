@@ -1966,7 +1966,7 @@ body.menu-opened {
 -----------------------*/
 
 .error-box {
-	background-color: #fff;
+	background-color: transparent;
 	border-radius: 5px;
 	line-height: 1;
 	margin: 0 auto;
@@ -1985,12 +1985,12 @@ body.menu-opened {
 	margin: 0 0 1.5rem;
 }
 .error-wrapper {
-	background-color: #fff;
+	background: url('../img/img-01.jpg');
 	margin: 0;
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	height: 100%;
+	height: 100vh;
 }
 .error-box h1 {
     font-size: 150px;

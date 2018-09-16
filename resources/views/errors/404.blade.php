@@ -66,7 +66,7 @@
 	</div>
 
     <div class="main-content error-wrapper">
-        <div class="content m-t-50">
+        <div class="content">
             <div class="container">
                 <div class="error-box">
                     <h1>404</h1>
