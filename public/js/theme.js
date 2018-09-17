@@ -10,6 +10,16 @@ $(document).ready(function() {
 	$(window).on("load", function () {
         $('#preloader').fadeOut(500);
     });
+
+    var $checkbox = document.forms["register"]["cgu"].checked
+
+  	$("#cgu").onchange = function() {
+	  if(checkbox.checked) {
+	    alert('mafffff')
+	  } else {
+	    otherText.style.visibility = 'hidden';
+	  }
+	}
 	
 	// Mobile menu overlay
 	

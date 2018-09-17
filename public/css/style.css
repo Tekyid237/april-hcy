@@ -231,6 +231,10 @@ textarea {
 	padding: 5px 14px;
 	color: #2e77fa;
 }
+.main-nav > li > a.settings-icon:hover,
+.main-nav > li > a.settings-icon:focus {
+	color: #fff !important;
+}
 .section {
 	padding: 80px 0;
 }
