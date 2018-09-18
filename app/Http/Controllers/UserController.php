@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,7 +17,7 @@ class HomeController extends Controller
     }
     
     /**
-     * Show the application dashboard.
+     * Show the application home.
      *
      * @return \Illuminate\Http\Response
      */
@@ -25,4 +25,16 @@ class HomeController extends Controller
     {
         return view('frontoffice.home');
     }
+
+    /**
+     * Show the user account.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function account()
+    {
+        return view('frontoffice.account');
+    }
+
+
 }

@@ -5,22 +5,34 @@ $(document).ready(function() {
 	})*/
 
 	
-	// Preload fonction
+	// Preload function
 
 	$(window).on("load", function () {
-        $('#preloader').fadeOut(500);
+        $("#preloader").fadeOut(500);
     });
 
-    var $checkbox = document.forms["register"]["cgu"].checked
+	// Form validates functions
 
-  	$("#cgu").onchange = function() {
-	  if(checkbox.checked) {
-	    alert('mafffff')
-	  } else {
-	    otherText.style.visibility = 'hidden';
-	  }
-	}
+	$(".form-check").submit(function(){
+	    $("button[type='submit']", this)
+	    .val("Envoi...")
+	    .attr('disabled', 'disabled');
+	    return true;
+  	});
+
+  	if ($('#registerForm').length) {
+        $('#agree').click(function () {
+	    	$('#registerBtn').prop("disabled", 
+	    	!$("#agree").prop("checked")); 
+  		})
+  	}
 	
+	/*$('#registerForm').length (function() {
+        if (!($('#agree').is(':checked'))) {
+            alert("Please Tick the Agree to Terms of Use");
+        }
+    });*/
+
 	// Mobile menu overlay
 	
 	$(".toggle-menu").on("click", function() {

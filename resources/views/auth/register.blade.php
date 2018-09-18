@@ -79,7 +79,7 @@
         <div class="content">
             <div class="container">
                 <div class="account-box">
-                    <form class="form-signin" name="register" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    <form class="form-signin" id="registerForm" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
                         <div class="account-title">
@@ -134,29 +134,18 @@
                             <label for="password-confirm">Confirmez le mot de passe</label>
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Numéro de téléphone</label>
-                            <input id="phone" type="tel" pattern="[0-9]{9}" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" required>
 
-                            @if ($errors->has('phone'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('phone') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                        
                         <div class="form-group checkbox">
                             <label>
-                                <input id="cgu" name="cgu" type="checkbox"> J'ai lu et j'accepte les <a href="{{ route('cgu-april') }}">termes & conditions</a>
+                                <input id="agree" name="agree" type="checkbox"> J'ai lu et j'accepte les <a href="{{ route('cgu-april') }}">termes & conditions</a>
                             </label>
                         </div>
 
                         <div class="form-group text-center">
-                            <button class="btn btn-primary account-btn" type="submit" {{-- disabled --}}>M'inscrire</button>
+                            <button class="btn btn-primary account-btn" id="registerBtn" type="submit" disabled>M'inscrire</button>
                         </div>
                         <div class="text-center login-link">
-                            J'ai déjà un compte? <a href="{{ route('login') }}">Me connecter</a>
+                            Déjà inscrit? <a href="{{ route('login') }}">Se connecter</a>
                         </div>
                     </form>
                 </div>

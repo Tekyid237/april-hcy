@@ -1,0 +1,1 @@
+@extends('frontoffice.layouts.master')

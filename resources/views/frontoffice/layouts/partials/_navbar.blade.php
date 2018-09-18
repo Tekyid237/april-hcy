@@ -13,16 +13,34 @@
                             <li class="{{ set_active('home') }}"><a href= "{{ url('home') }}">Accueil</a></li>
                             <li class="{{ set_active('about') }}"><a href="{{ url('about') }}">A Propos</a></li>
                             <li class="{{ set_active('contact') }}"><a href="{{ url('contact') }}">Contact</a></li>
-                            <li><a class="btn btn-primary appoint-btn" href="{{ url('appointment') }}">Prendre un RDV</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle settings-icon" data-toggle="dropdown">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ url('login') }}">Se Connecter</a></li>
-                                    <li><a href="{{ url('register') }}">S'inscrire</a></li>
-                                </ul>
-                            </li>
+                            @if (!Auth::guest())
+                                <li><a class="btn btn-primary appoint-btn" href="{{ url('appointment') }}">Prendre un RDV</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle settings-icon" data-toggle="dropdown">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ url('account') }}">Mon Compte</a></li>
+                                        <li><a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()";>Déconnexion</a></li>
+                                    </ul>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @else
+                                <li><a class="btn btn-primary appoint-btn" href="{{ url('login') }}">Prendre un RDV</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle settings-icon" data-toggle="dropdown">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                               
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ url('login') }}">Se Connecter</a></li>
+                                        <li><a href="{{ url('register') }}">S'inscrire</a></li>
+                                    </ul>
+                                </li>
+                            @endif
+                            
                         </ul>
                     </div>
                 </div>
@@ -87,9 +105,15 @@
                 </div>
             </li>
             <li>
-                <div class="mobile-menu-item clearfix">
-                    <a href="{{ url('appointment') }}">Prendre un rendez-vous</a>
-                </div>
+                @if(!Auth::guest())
+                    <div class="mobile-menu-item clearfix">
+                        <a href="{{ url('appointment') }}">Prendre un rendez-vous</a>
+                    </div>
+                @else
+                    <div class="mobile-menu-item clearfix">
+                        <a href="{{ url('login') }}">Prendre un rendez-vous</a>
+                    </div>
+                @endif
             </li>
         </ul>
     </div>

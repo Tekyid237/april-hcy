@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class pagesController extends Controller
 {
-	/**
+
+    /**
      * Display the static page home.
      *
      * @return \Illuminate\Http\Response

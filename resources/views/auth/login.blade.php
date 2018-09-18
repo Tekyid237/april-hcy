@@ -74,7 +74,7 @@
         <div class="content">
             <div class="container">
                 <div class="account-box">
-                    <form class="form-signin" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                    <form class="form-signin form-check" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         
                         @csrf
 
@@ -122,7 +122,7 @@
                             <button class="btn btn-primary account-btn" type="submit">Connexion</button>
                         </div>
                         <div class="text-center register-link">
-                            Je n'ai pas de compte? <a href="{{ route('register') }}">M'inscrire maintenant</a>
+                            Pas de compte? <a href="{{ route('register') }}">S'inscrire maintenant</a>
                         </div>
                     </form>
                 </div>
