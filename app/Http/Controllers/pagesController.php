@@ -51,4 +51,13 @@ class pagesController extends Controller
     public function contact() {
     	return view('frontoffice.contact');
     }
+
+    /**
+     * Display the static page appointment.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function appointment() {
+        return view('frontoffice.appointment');
+    }
 }

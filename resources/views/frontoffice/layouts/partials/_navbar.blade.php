@@ -68,11 +68,16 @@
                     <i class="fa fa-user"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ url('login') }}">Se Connecter</a></li>
-                    <li><a href="{{ url('register') }}">S'inscrire</a></li>
-                    {{-- <li><a href="{{ url('account') }}">Mon Compte</a></li>
-                    <li><a href="{{ url('appointment') }}">Prendre un RDV</a></li>
-                    <li><a href="{{ url('logout') }}">Déconnexion</a></li> --}}
+                    @if(!Auth::guest())
+                        <li><a href="{{ url('account') }}">Mon Compte</a></li>
+                        @if(!Route::is('appointment'))
+                            <li><a href="{{ url('appointment') }}">Prendre un RDV</a></li>
+                        @endif
+                        <li><a href="{{ url('logout') }}">Déconnexion</a></li>
+                    @else
+                        <li><a href="{{ url('login') }}">Se Connecter</a></li>
+                        <li><a href="{{ url('register') }}">S'inscrire</a></li>
+                    @endif
                 </ul>
             </li>
         </ul>

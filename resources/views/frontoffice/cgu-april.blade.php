@@ -5,15 +5,15 @@
 		<div class="content">
 			<div class="container">
 				<span class="stabilisation"></span>
-				<p style="text-align: center;"><strong>CONDITIONS GÉNÉRALES D'UTILISATION</strong> <strong> </strong><strong>DE L'APPLICATION</strong></p>
-				<p style="text-align: center;"><strong><span id="span_id_nom_site">APRIL</span></strong></p>
+				<h3 style="text-align: center;"><strong>CONDITIONS GÉNÉRALES D'UTILISATION</strong> <strong> </strong><strong>DE L'APPLICATION</strong></h3>
+				<h3 style="text-align: center;"><strong><span id="span_id_nom_site">APRIL</span></strong></h3>
 
 				<p><strong></strong></p>
 				<p><strong><br>ARTICLE 1. INFORMATIONS LÉGALES</strong></p>
 				<p>En vertu de l'article 6 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé dans cet article l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
 				<p>L'application <span id="span_id_nom_site">APRIL</span> est éditée par : </p>
-				<p><span id="span_id_nom_editeur">l'Hôpital Central de Yaoundé</span>, dont le siège siège social est situé à l'adresse suivante : <span id="span_id_adresse_siege_social_editeur">Rue 2.008 derrière CENAME,  Yaoundé, Cameroun</span>, sous la tutelle du <span id="span_id_immatriculation_editeur">Ministère de la Santé Publique de la République du Cameroun</span>.</p>
-				<p>Téléphone : <span id="span_id_n_de_telephone_de_la_societe">(+237) 222 234 020</span>/ Adresse e-mail : <span id="span_id_adresse_mail_editeur">info@hopitalcentral.cm</span>.</p>
+				<p><span id="span_id_nom_editeur">l'Hôpital Central de Yaoundé</span>, dont le siège social est situé à l'adresse suivante : <span id="span_id_adresse_siege_social_editeur">Rue 2.008 derrière CENAME,  Yaoundé, Cameroun</span>, sous la tutelle du <span id="span_id_immatriculation_editeur">Ministère de la Santé Publique de la République du Cameroun</span>.</p>
+				<p>Téléphone : <span id="span_id_n_de_telephone_de_la_societe">(+237) 222 234 020</span> / Adresse e-mail : <span id="span_id_adresse_mail_editeur">info@hopitalcentral.cm</span>.</p>
 
 				<p><br>Le directeur d'édition de cette application est : <span id="span_id_civilite_et_nom_du_directeur_de_publication">Idriss Tekeudo</span>.</p>
 				<p><strong><br>ARTICLE 2. PRÉSENTATION DE L'APPLICATION</strong></p>
