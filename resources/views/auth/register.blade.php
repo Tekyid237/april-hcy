@@ -98,7 +98,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="lastname">Nom (s)</label>
+                            <label for="lastname">Nom (s) <span class="text-red">*</span></label>
                             <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required>
 
                             @if ($errors->has('lastname'))
@@ -109,7 +109,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Adresse email</label>
+                            <label for="email">Adresse email <span class="text-red">*</span></label>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                             @if ($errors->has('email'))
@@ -120,7 +120,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="password">Mot de passe</label>
+                            <label for="password">Mot de passe <span class="text-red">*</span></label>
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                             @if ($errors->has('password'))
@@ -131,19 +131,25 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="password-confirm">Confirmez le mot de passe</label>
+                            <label for="password-confirm">Confirmez le mot de passe <span class="text-red">*</span></label>
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                         </div>
 
                         <div class="form-group checkbox">
                             <label>
-                                <input id="agree" name="agree" type="checkbox"> J'ai lu et j'accepte les <a href="{{ route('cgu-april') }}">termes & conditions</a>
+                                <input id="agree" name="agree" type="checkbox"> J'ai lu et j'accepte les <a href="{{ route('cgu-april') }}">termes & conditions</a> <span class="text-red">*</span>
                             </label>
                         </div>
 
                         <div class="form-group text-center">
                             <button class="btn btn-primary account-btn" id="registerBtn" type="submit" disabled>M'inscrire</button>
+                            <div class="text-center">
+                                <p class="small text-info">Les champs suivis d'une étoile<span class="text-red">*</span> sont obligatoires</p>
+                            </div>
                         </div>
+
+                        
+                        
                         <div class="text-center login-link">
                             Déjà inscrit? <a href="{{ route('login') }}">Se connecter</a>
                         </div>

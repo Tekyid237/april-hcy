@@ -13,12 +13,22 @@ $(document).ready(function() {
 
 	// Form validates functions
 
-	$(".form-check").submit(function(){
+	/*$(".form-check").submit(function(){
 	    $("button[type='submit']", this)
 	    .val("Envoi...")
 	    .attr('disabled', 'disabled');
 	    return true;
+  	});*/
+
+  	$(document).ready(function() {
+  		$(".btn-pref .btn").click(function () {
+  			$(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
+    		// $(".tab").addClass("active"); // instead of this do the below 
+    		$(this).removeClass("btn-default").addClass("btn-primary");   
+		});
   	});
+
+	//Register control form 
 
   	if ($('#registerForm').length) {
         $('#agree').click(function () {
@@ -26,12 +36,6 @@ $(document).ready(function() {
 	    	!$("#agree").prop("checked")); 
   		})
   	}
-	
-	/*$('#registerForm').length (function() {
-        if (!($('#agree').is(':checked'))) {
-            alert("Please Tick the Agree to Terms of Use");
-        }
-    });*/
 
 	// Mobile menu overlay
 	
@@ -125,7 +129,8 @@ $(document).ready(function() {
 		
 	if($('.datetimepicker').length > 0 ){
 		$('.datetimepicker').datetimepicker({
-			format: 'DD/MM/YYYY'
+			format: 'DD/MM/YYYY',
+			locale: 'fr'
 		});
 	}
 	

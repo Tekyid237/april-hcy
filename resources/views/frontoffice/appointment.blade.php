@@ -1,4 +1,4 @@
-@extends('frontoffice.layouts.master')
+@extends('frontoffice.layouts.master', ['title' => 'Rendez-vous'])
 
 @section('stylesheet')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/select2.min.css') }}">
@@ -7,8 +7,17 @@
 
 @section('content')
 	<div class="main-content account-content">
+		
 		<div class="content">
 			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header text-center">
+							<h3 class="header-title">Prendre un rendez-vous</h3>
+							<div class="line"></div>
+						</div>
+					</div>
+				</div>
 				<div class="account-box">
 					<div class="appointment">
 						<ul class="nav nav-tabs nav-justified">

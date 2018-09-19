@@ -119,7 +119,7 @@
                             <a href="{{ route('password.request') }}">Mot de passe oublié?</a>
                         </div>
                         <div class="form-group text-center">
-                            <button class="btn btn-primary account-btn" type="submit">Connexion</button>
+                            <button class="btn btn-primary account-btn data-loading-text="Connexion..."" type="submit">Connexion</button>
                         </div>
                         <div class="text-center register-link">
                             Pas de compte? <a href="{{ route('register') }}">S'inscrire maintenant</a>
