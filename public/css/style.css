@@ -518,6 +518,11 @@ textarea {
 	min-width: 450px;
 }
 
+.well-box{
+	padding: 30px !important;
+	background-color: #fafafa;
+}
+
 /* USER PROFILE PAGE */
  .card {
     padding: 30px;

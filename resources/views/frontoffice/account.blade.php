@@ -44,7 +44,7 @@
                 				</div>
                 			</div>
 
-                			<div class="well">
+                			<div class="well well-box">
                 				<div class="tab-content">
                 					<div class="tab-pane fade in active" id="tab1">
                 						<h3>Modifier mes infos de compte</h3>
@@ -52,7 +52,7 @@
                 							@csrf
                 							<div class="form-group">
                 								<label for="firstname">Prénom (s)</label>
-                								<input id="firstname" type="text" class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ old('firstname') }}" autofocus>
+                								<input id="firstname" type="text" class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ auth()->user()->firstname }}" autofocus>
 
                 								@if ($errors->has('firstname'))
                 								<span class="invalid-feedback" role="alert">
@@ -63,7 +63,7 @@
 
                 							<div class="form-group">
                 								<label for="lastname">Nom (s)</label>
-                								<input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required>
+                								<input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ auth()->user()->lastname }}" required>
 
                 								@if ($errors->has('lastname'))
                 								<span class="invalid-feedback" role="alert">
@@ -74,7 +74,7 @@
 
                 							<div class="form-group">
                 								<label for="email">Adresse email</label>
-                								<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                								<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ auth()->user()->email }}" required>
 
                 								@if ($errors->has('email'))
                 								<span class="invalid-feedback" role="alert">
@@ -84,23 +84,18 @@
                 							</div>
 
                 							<div class="form-group">
-                								<label for="password">Mot de passe</label>
-                								<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                								<label for="phone">Numéro de téléphone</label>
+                								<input id="phone" type="tel" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required>
 
-                								@if ($errors->has('password'))
+                								@if ($errors->has('phone'))
                 								<span class="invalid-feedback" role="alert">
-                									<strong>{{ $errors->first('password') }}</strong>
+                									<strong>{{ $errors->first('phone') }}</strong>
                 								</span>
                 								@endif
                 							</div>
 
-                							<div class="form-group">
-                								<label for="password-confirm">Confirmez le mot de passe</label>
-                								<input id="password-confirm" type="password" class="form-control" name="password-confirm" required>
-                							</div>
-
                 							<div class="form-group text-center">
-                								<button class="btn btn-primary account-btn" id="registerBtn" type="submit" disabled>M'inscrire</button>
+                								<button class="btn btn-primary" type="submit">Mettre à jour mon profil</button>
                 							</div>
                 						</form>
                 					</div>

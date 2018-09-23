@@ -74,6 +74,11 @@
         <div class="content">
             <div class="container">
                 <div class="account-box">
+                   {{--  @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif --}}
                     <form class="form-signin form-check" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         
                         @csrf

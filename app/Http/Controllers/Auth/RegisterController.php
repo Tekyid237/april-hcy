@@ -90,7 +90,7 @@ class RegisterController extends Controller
             'lastname' => $data['lastname'],
             'firstname' => $data['firstname'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
             'role' => 0,
         ]);
     }
