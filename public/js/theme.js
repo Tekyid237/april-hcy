@@ -11,6 +11,8 @@ $(document).ready(function() {
         $("#preloader").fadeOut(500);
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 	// Form validates functions
 
 	/*$(".form-check").submit(function(){

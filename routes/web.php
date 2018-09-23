@@ -17,6 +17,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/account', 'UserController@account')->name('users.account');
     Route::get('/update-password', 'UserController@updatePassword')->name('users.password');
+    Route::get('/appointment', 'PagesController@appointment')->name('appointment');
 });
 
 
@@ -28,5 +29,5 @@ Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/cgu-april', 'PagesController@cgu')->name('cgu-april');
 Route::get('/faq', 'PagesController@faq')->name('faq');
 Route::get('/contact', 'PagesController@contact')->name('contact');
-Route::get('/appointment', 'PagesController@appointment')->name('appointment');
+
 

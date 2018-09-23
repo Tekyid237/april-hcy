@@ -132,7 +132,7 @@
                         
                         <div class="form-group">
                             <label for="password-confirm">Confirmez le mot de passe <span class="text-red">*</span></label>
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            <input id="password-confirm" type="password" class="form-control" name="password-confirm" required>
                         </div>
 
                         <div class="form-group checkbox">

@@ -16,14 +16,15 @@
                             @if (!Auth::guest())
                                 <li><a class="btn btn-primary appoint-btn" href="{{ url('appointment') }}">Prendre un RDV</a></li>
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle settings-icon" data-toggle="dropdown">
-                                        <i class="fa fa-user"></i>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url('/') }}">
+                                        <img src="{{ asset('img/default.jpg') }}" alt="{{ config('app.name') }}" class="img-responsive" width="24" height="24" style="display: inline-block;">
+                                        {{ Auth::user()->firstname }}
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ url('account') }}">Mon Compte</a></li>
-                                        <li><a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()";>Déconnexion</a></li>
+                                        <li><a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a></li>
                                     </ul>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                                         @csrf
                                     </form>
                                 </li>
@@ -57,7 +58,7 @@
         </a>
     </div>
     <div class="page_title">
-        <a href="index.html">
+        <a href="{{ url('/') }}">
             <img src="{{ asset('img/logo.png') }}" alt="{{ config('app.name') }}" class="img-responsive" width="60" height="60">
         </a>
     </div>

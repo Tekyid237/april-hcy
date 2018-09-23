@@ -153,6 +153,12 @@ textarea {
 	border-color: #065bf9;
 }
 
+.form-control.is-invalid{
+	border: 1px solid #f00 !important;
+}
+
+
+
 /*-----------------
 	2. Header
 -----------------------*/
@@ -514,7 +520,6 @@ textarea {
 
 /* USER PROFILE PAGE */
  .card {
-    margin-top: 20px;
     padding: 30px;
     background-color: rgba(214, 224, 226, 0.2);
     -webkit-border-top-left-radius:5px;
@@ -593,6 +598,10 @@ textarea {
 }
 .btn-pref .btn {
     -webkit-border-radius:0 !important;
+}
+
+.card-bkimg{
+	cursor: pointer !important;
 }
 
 
