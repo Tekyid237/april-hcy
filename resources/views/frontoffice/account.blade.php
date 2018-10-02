@@ -93,6 +93,12 @@
                 								</span>
                 								@endif
                 							</div>
+                							<div class="form-group">
+                								<label for="phone">Numéro de téléphone</label>
+                								<input id="phone" type="tel" class="form-control input-inline{{ $errors->has('email') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required>
+
+                							</div>
+                							
 
                 							<div class="form-group text-center">
                 								<button class="btn btn-primary" type="submit">Mettre à jour mon profil</button>

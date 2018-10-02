@@ -20,6 +20,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/appointment', 'PagesController@appointment')->name('appointment');
 });
 
+Route::group(['middleware' => 'Admin'], function () {
+    Route::get('/account', 'UserController@account')->name('users.account');
+    Route::get('/update-password', 'UserController@updatePassword')->name('users.password');
+    Route::get('/appointment', 'PagesController@appointment')->name('appointment');
+});
 
 Route::get('/', 'PagesController@home')->name('home');
 
